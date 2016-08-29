@@ -1,7 +1,8 @@
 
-
+// Define the class as function to make sure we can create instance using 'new'
 U.Class = function() {};
 
+// Used for inherit
 U.Class.extend = function(props) {
 
     // Returns a Javascript function that is a class constructor (to be called with `new`).
