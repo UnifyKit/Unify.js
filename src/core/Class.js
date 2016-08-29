@@ -1,30 +1,8 @@
-KChart.Util = {
 
-    extend: function(dist) {
-        var i, j, len, src;
 
-        //Add the second and later arguments' properties to the first argument.
-        for(i = 1, len = arguments.length; i < len; i++) {
-            src = arguments[i];
+U.Object = function() {};
 
-            for(j in src) {
-                dist[j] = src[j];
-            }
-        }
-
-        return dist;
-    },
-
-    create: Object.create || function(proto) {
-        function F() {};
-        F.prototype = proto;
-        return new F();
-    }
-};
-
-KChart.Object = function() {};
-
-KChart.Object.extend = function(props) {
+U.Object.extend = function(props) {
 
     // @function extend(props: Object): Function
     // [Extends the current class](#class-inheritance) given the properties to be included.

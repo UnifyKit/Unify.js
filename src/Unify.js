@@ -1,8 +1,9 @@
-var Unify = {
+// As namespace, U means Unify.js
+var U = {
     version: '0.0.1'
-}; //As namespace
+};
 
-
+// function for expose it as the global variable of window
 function expose() {
     var oldU = window.U;
 
@@ -14,16 +15,16 @@ function expose() {
     window.U = U;
 }
 
-// define Leaflet for Node module pattern loaders, including Browserify
+// define Unify.js for Node module pattern loaders, including Browserify
 if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = U;
 
-// define Leaflet as an AMD module
+// define Unify.js as an AMD module
 } else if (typeof define === 'function' && define.amd) {
     define(U);
 }
 
-// define Leaflet as a global U variable, saving the original U to restore later if needed
+// define Unify.js as a global U variable, saving the original U to restore later if needed
 if (typeof window !== 'undefined') {
     expose();
 }
