@@ -35,8 +35,8 @@ U.Util = {
         return -1;
     },
 
-    // Data URI string containing a base64-encoded empty GIF image.
+    // Data URI string containing a base64-encoded empty png image.
     // Used as a hack to free memory from unused images on WebKit-powered
     // mobile devices (by setting image `src` to this string).
-    emptyImageUrl: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
+    emptyImageUrl: 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 };
