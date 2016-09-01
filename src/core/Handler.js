@@ -35,5 +35,13 @@ U.Handler = U.Class.extend({
     // Returns `true` if the handler is enabled
     enabled: function () {
         return !!this._enabled;
+    },
+
+    addHooks:function () {
+        // Implement it in sub-classes
+    },
+
+    removeHooks:function () {
+        // Implement it in sub-classes
     }
 });
