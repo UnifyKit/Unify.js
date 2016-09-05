@@ -7,7 +7,7 @@
   * @method removeHooks(), Called when the handler is disabled, should remove the event hooks added previously.
 */
 U.Handler = U.Class.extend({
-    initialize: function (element) {    // The element is a UI component, like Chart, Map etc.
+    init: function (element) {    // The element is a UI component, like Chart, Map etc.
         this.element = element;
     },
 

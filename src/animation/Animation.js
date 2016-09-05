@@ -1,6 +1,6 @@
 U.Animation = U.Class.extend({
 
-    initialize: function (start, end, tween) {
+    init: function (start, end, tween) {
         this.start = start;
         this.end = end;
         this.tween = tween || U.Tween.Linear;
