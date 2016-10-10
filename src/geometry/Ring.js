@@ -4,19 +4,17 @@ U.Ring = U.Line.extend({
         var added = false;
 
         //remove last point
-        var lastPoint = this.components.pop();
+        var lastPoint = this.geometries.pop();
 
         // given an index, add the point
         // without an index only add non-duplicate points
         if(index != null || !point.equals(lastPoint)) {
-            added = OpenLayers.Geometry.Collection.prototype.addComponent.apply(this,
-                arguments);
+            added = U.Collection.Collection.prototype.addGeometry.apply(this,arguments);
         }
 
         //append copy of first point
-        var firstPoint = this.components[0];
-        OpenLayers.Geometry.Collection.prototype.addComponent.apply(this,
-            [firstPoint]);
+        var firstPoint = this.geometries[0];
+        U.Collection.Collection.prototype.addGeometry.apply(this,[firstPoint]);
 
         return added;
     }
