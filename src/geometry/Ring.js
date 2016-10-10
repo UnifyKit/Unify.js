@@ -1,5 +1,5 @@
 U.Ring = U.Line.extend({
-    addVertex:function (point, index) {
+    addVertex: function (point, index) {
 
         var added = false;
 
@@ -8,13 +8,13 @@ U.Ring = U.Line.extend({
 
         // given an index, add the point
         // without an index only add non-duplicate points
-        if(index != null || !point.equals(lastPoint)) {
-            added = U.Collection.Collection.prototype.addGeometry.apply(this,arguments);
+        if (index != null || !point.equals(lastPoint)) {
+            added = U.Collection.prototype.addGeometry.apply(this, arguments);
         }
 
         //append copy of first point
         var firstPoint = this.geometries[0];
-        U.Collection.Collection.prototype.addGeometry.apply(this,[firstPoint]);
+        U.Collection.prototype.addGeometry.apply(this, [firstPoint]);
 
         return added;
     }
