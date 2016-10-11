@@ -112,5 +112,6 @@ U.Polygon.createRegularPolygon = function(origin, radius, sides, rotation) {
         points.push(new U.Point(x, y));
     }
     var ring = new U.Line(points);
+
     return new U.Polygon([ring]);
 };
