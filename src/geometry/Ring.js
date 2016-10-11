@@ -160,8 +160,7 @@ U.Ring = U.Line.extend({
                 ++crosses;
             }
         }
-        var contained = (crosses == -1) ?
-            // on edge
+        var contained = (crosses == -1) ? // on edge
             1 :
             // even (out) or odd (in)
             !!(crosses & 1);
