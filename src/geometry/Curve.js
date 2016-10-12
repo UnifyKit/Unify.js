@@ -1,4 +1,4 @@
-U.Curve = U.Collection.extend({
+U.Curve = U.MultiPoint.extend({
     getLength: function () {
         var length = 0.0;
         if (this.geometries && (this.geometries.length > 1)) {

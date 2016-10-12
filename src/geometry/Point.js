@@ -125,11 +125,11 @@ U.Point = U.Geometry.extend({
         return Math.sqrt(x * x + y * y);
     },
 
-    distanceToSegment:function (segment) {
+    distanceToSegment: function (segment) {
         return Math.sqrt(this._closestPointOnSegment(p1, p2, true));
     },
 
-    closestPointOnSegment:function (segment) {
+    closestPointOnSegment: function (segment) {
         return Math.sqrt(this._closestPointOnSegment(p1, p2, false));
     },
 

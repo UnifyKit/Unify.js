@@ -189,7 +189,7 @@ U.Ring = U.Line.extend({
         return intersect;
     },
 
-    getVertices: function(endPointsOnly) {
-        return (endPointsOnly === true) ? [] : this.geometries.slice(0, this.geometries.length-1);
+    getVertices: function (endPointsOnly) {
+        return (endPointsOnly === true) ? [] : this.geometries.slice(0, this.geometries.length - 1);
     }
 })
