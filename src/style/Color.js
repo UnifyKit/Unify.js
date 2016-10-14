@@ -53,3 +53,39 @@ U.Color.hexToRgb = function (hex) {
 
     return new Array(redValue, greenValue, blueValue);
 };
+
+U.Color.randomColors = function (options) {
+    var options = options || {};
+
+    var seed = null;
+    if (options.seed != undefined && options.seed !== null && options.seed == parseInt(options.seed, 10)) {
+        seed = options.seed;
+    } else if (typeof options.seed === 'string') {
+        seed = 0
+        for (var i = 0; i !== options.seed.length; i++) {
+            if (seed >= Number.MAX_VALUE) {
+                break;
+            }
+
+            seed += options.seed.charCodeAt(i)
+        }
+    }
+
+    var colors = []
+    if (options.count !== null && options.count !== undefined) {
+
+        var totalColors = options.count;
+        options.count = null;
+
+        while (totalColors > colors.length) {
+
+            if (seed && options.seed) options.seed += 1;
+
+            colors.push(U.Color.randomColors(options));
+        }
+
+        options.count = totalColors;
+    }
+
+    return colors;
+};
