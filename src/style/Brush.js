@@ -4,4 +4,7 @@ U.Brush = U.Class.extend({
         this.fileType = fillType?fillType:'solid';
     }
 
+    applyToCanvas:function (context) {
+
+    }
 })
