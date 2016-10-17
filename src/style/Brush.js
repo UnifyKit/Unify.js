@@ -1,10 +1,10 @@
 U.Brush = U.Class.extend({
-    init:function (color, fillType) {
-        this.color = color?color:new U.Color("#000000");
-        this.fileType = fillType?fillType:'solid';
-    }
+    init: function (color, brushType) { // Color here can be a real color (name, argb, hex etc.) or a gradient object.
+        this.color = color ? color : new U.Color("#000000");
+        this.brushType = brushType ? brushType : U.BrushType.Solid;
+    },
 
-    applyToCanvas:function (context) {
-
+    applyToCanvas: function (context) {
+        context.fillStyle = this.color;
     }
 })
