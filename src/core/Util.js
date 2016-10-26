@@ -126,6 +126,22 @@ U.Util = {
         };
     },
 
+    getElement: function () {
+        var elements = [];
+
+        for (var i = 0, len = arguments.length; i < len; i++) {
+            var element = arguments[i];
+            if (typeof element == 'string') {
+                element = document.getElementById(element);
+            }
+            if (arguments.length == 1) {
+                return element;
+            }
+            elements.push(element);
+        }
+        return elements;
+    },
+
     // Data URI string containing a base64-encoded empty png image.
     // Used as a hack to free memory from unused images on WebKit-powered
     // mobile devices (by setting image `src` to this string).
